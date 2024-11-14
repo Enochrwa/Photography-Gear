@@ -1,0 +1,307 @@
+<html>
+
+<head>
+    <title>Photography Gear Store</title>
+    <style>
+        :root {
+            --primary-color: #000;
+            --secondary-color: #fff;
+            --accent-color: #c0c0c0;
+
+            --font-primary: "Roboto", Helvetica;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            color: var(--secondary-color);
+            background-color: var(--primary-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #222;
+            text-align: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            margin-right: 10px;
+            border-radius: 15%;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Welcome Banner Styling */
+        .welcome-banner {
+            background-image: url("images/came3.jpg");
+            margin-left: 5%;
+            margin-right: 5%;
+            background-position: center;
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .welcome-text h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .welcome-text p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .category {
+            padding: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            gap: 2.9rem;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1.2rem));
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        .product-item button {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        footer {
+            background-color: #111;
+            color: var(--secondary-color);
+            padding: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="logo"><img src="images/came2.jpg" alt="logo"></div>
+        <nav>
+            <ul>
+                <a href="#cameras">Cameras</a>
+                <a href="#lenses">Lenses</a>
+                <a href="#tripods">Tripods</a>
+                <a href="#lighting">Lighting</a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="welcome-banner">
+        <div class="welcome-text">
+            <h1>Welcome to Photography Gear Store</h1>
+            <p>Your one-stop shop for all photography essentials!</p>
+        </div>
+    </section>
+
+    <section id="cameras" class="category">
+        <h2>Cameras</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/came1.jpg" alt="Camera">
+                <h3>DSLR Camera</h3>
+                <p>High-quality DSLR camera for professionals.</p>
+                <span>$1800</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/road cam.jpg" alt="Camera">
+                <h3>Road Camera</h3>
+                <p>High-quality Road camera for professionals.</p>
+                <span>$1100</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/came3.jpg" alt="Camera">
+                <h3>NIKON Camera</h3>
+                <p>High-quality NIKON camera for professionals.</p>
+                <span>$1000</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/came5.jpg" alt="Camera">
+                <h3>Rolleiflex Camera</h3>
+                <p>High-quality DSLR camera for professionals.</p>
+                <span>$1300</span>
+                <button>Add to Cart</button>
+            </div>
+
+        </div>
+        <h2>Lenses</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/lens.jpg" alt="Camera">
+                <h3>Prime lens</h3>
+                <p>A prime lens is a classic style that has been around as long as cameras have. Prime lenses have a
+                    fixed focal range,
+                    which means that you can't zoom in or out.</br>
+                    Prime lenses produce much higher quality images than a zoom lens in general, but you will need to
+                    know in which
+                    situation you can use them.
+                </p>
+                <span>$800</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/lens2.jpg" alt="Camera">
+                <h3>zoom lens</h3>
+                <p>These lens offers you a great range for photographing anything from people in the streets to wildlife
+                    in the African Savanna. And you can zoom from 70mm all the way up to 200mm</p>
+                <span>$1300</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/lens3.jpg" alt="Camera">
+                <h3>Fisheye Lenses</h3>
+                <p>High-quality Fisheye Lenses they are Abstract&creative with focal length of 4mm - 14mm.
+                    If you need to capture an even wider field of view, then you’ll need to invest in a fisheye lens.
+                </p>
+                <span>$1800</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/lens4.jpg" alt="Camera">
+                <h3>Telephoto Lens</h3>
+                <p>If a standard zoom lens isn’t quite strong enough for your needs, then the next step up is a
+                    telephoto lens. These big
+                    lenses are found within a range of 100mm up to 600mm, sometimes even more.</p>
+                <span>$1200</span>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <h2>Tripods</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/tripod1.jpg" alt="Camera">
+                <h3>SLR stands</h3>
+                <p>We are almost with 100 users with this kind of stands, you might also be the one.</p>
+                <span>$1500</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/tripod2.jpg" alt="Camera">
+                <h3>Tr23 stands</h3>
+                <p>More photographers choosed this, due to it's capability of taking the camera as it's bag.</p>
+                <span>$3000</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/tripod3.jpg" alt="Camera">
+                <h3>Tripods stands</h3>
+                <p>The more you keep your camera to High-quality location, the beauty picture you take!!</p>
+                <span>$1700</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/tripod6.jpg" alt="Camera">
+                <h3>Ls7 stands</h3>
+                <p>This is the most used stands in nowadays ceremonies, don't hesitate to add it to Cart</p>
+                <span>$1200</span>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <h2>Lighting</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/ligth1.jpg" alt="Camera">
+                <h3>flash lighting</h3>
+                <p>Flash lighting is one of the most favorable here, </p>
+                <span>$1200</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/lighting.jpg" alt="Camera">
+                <h3>DSLR Lenses</h3>
+                <p>High-quality DSLR lighting for professionals.</p>
+                <span>$1200</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/light4.jpg" alt="Camera">
+                <h3>DSLR lighting</h3>
+                <p>High-quality lighting for professionals.</p>
+                <span>$120</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/light2.jpg" alt="Camera">
+                <h3>Disk Lighting</h3>
+                <p>High-quality Disk Lighting is nowadays most likely</p>
+                <span>$1000</span>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Your trusted source for professional photography gear.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <a href="#cameras">Cameras</a>
+                    <a href="#lenses">Lenses</a>
+                    <a href="#tripods">Tripods</a>
+                    <a href="#lighting">Lighting</a>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@photogear.com</p>
+                <p>Phone: +250 789 481 336</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Photography Gear Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
