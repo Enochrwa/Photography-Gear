@@ -769,6 +769,9 @@ header {
 
 }
 @media (max-width: 640px) {
+  body{
+    color:#aaa;
+  }
   .hero-content h2 {
     font-size: 3rem;
   }
