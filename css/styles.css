@@ -1,111 +1,870 @@
-:root {
-  --primary-color: #000;
-  --secondary-color: #fff;
-  --accent-color: #c0c0c0;
-
-  --font-primary: "Roboto", Helvetica;
-}
 
 body {
-  font-family: var(--font-primary);
-  color: var(--secondary-color);
-  background-color: var(--primary-color);
   margin: 0;
   padding: 0;
+  font-family: 'Helvetica', 'Roboto', sans-serif;
+  background-color: black;
 }
 
-.top-header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #222;
-  text-align: center;
+  background-color: #111;
+  padding: 0px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
-  font-size: 2rem;
-  color: var(--accent-color);
-  height: 5%;
-  width: 10%;
-  background-image: url(/images/came2.jpg);
+  display: flex;
 }
 
-nav ul {
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+
+/* Hide nav-res and hamb on large screens */
+.nav-res{
+  display: none;
+}
+.nav-res ul {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right:7%;
+  top: 8%;
+  padding: 10px;
+  background-color: hsl(0,0%,10%);
+  border-radius: 10px;
+  width: 20%;
+
+}
+.hide-element {
+  display:none;
+}
+.nav-res ul li:hover{
+  background-color: hsl(180, 100%, 15%);
+  border-radius: 5px;
+  padding: 3px;
+}
+.hero-content{
+  margin-top: 60px;
+}
+.hamb {
+  display: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Show hamburger on small screens */
+.cart{
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.23rem;
+  margin-right: 200px;
+}
+.cart .added{
+  position: absolute;
+  bottom:40%;
+  right:15%;
+  color:magenta;
+  font-weight: bold;
+
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: silver;
+  color: #0c4a6e;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #aaa;
+}
+
+
+
+/* Categories Section */
+.categories-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f5f5f5;
+  /* Light gray background for contrast */
+}
+
+.categories-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0c4a6e;
+  /* Soft gold color, matching your palette */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Container for Category Cards */
+.categories-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Category Cards */
+.category-card {
+  background-color: #B97A57;
+  /* Soft gold */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Category Specific Styles */
+.category-card.cameras {
+  background-color: #F3A847;
+  /* Warm yellow-orange */
+}
+
+.category-card.lenses {
+  background-color: #FFD700;
+  /* Classic gold */
+}
+
+.category-card.tripods {
+  background-color: #B95D34;
+  /* Deep bronze */
+}
+
+.category-card.lighting {
+  background-color: #F4D35E;
+  /* Light golden yellow */
+}
+
+/* Add subtle hover effect on links */
+.category-card:hover h3 {
+  color: #3e3e3e;
+  /* Darker text on hover */
+}
+
+
+.footer {
+  background-color: #111;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: silver;
+}
+
+/* Gift Sets Section */
+.camera-section,
+.lights-section {
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 1.5rem;
+  background: linear-gradient(to bottom right, black, #1a1a1a);
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.camera-heading,
+.lights-heading {
+  font-size: 1.875rem;
+  /* 3xl */
+  font-weight: bold;
+  color: #0c4a6e;
+  /* Gold */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+
+.camera-card,
+.lights-card {
+  background-color: #2d2d2d;
+  /* Gray-800 */
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.camera-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.camera-image,
+.lights-image {
+  border-radius: 0.5rem;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  height: 13rem;
+  /* 52 */
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.camera-image:hover,
+.lights-image:hover {
+  opacity: 0.9;
+}
+
+.camera-title,
+.lights-title {
+  font-size: 1.25rem;
+  /* xl */
+  font-weight: 600;
+  /* semibold */
+  color: #0c4a6e;
+  /* Gold */
+  margin-bottom: 0.5rem;
+}
+
+.camera-price,
+.lights-price {
+  color: #d3d3d3;
+  /* Gray-300 */
+  font-size: 1.125rem;
+  /* lg */
+  font-weight: 300;
+  /* light */
+  margin-bottom: 0.75rem;
+}
+
+.camera-button,
+.lights-button{
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #0c4a6e;
+  /* Gold */
+  color: black;
+  font-weight: 600;
+  /* semibold */
+  border-radius: 0.5rem;
+  border: 1px solid #0c4a6e;
+  /* Gold */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.camera-button:hover,
+.lights-button:hover {
+  background-color: white;
+  color: #0c4a6e;
+  /* Gold */
+}
+
+
+
+/* Best Sellers Section */
+.lenses-section {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.5rem 1.5rem;
+  background-color: black;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.lenses-heading {
+  font-size: 1.875rem;
+  /* 3xl */
+  font-weight: 600;
+  /* semibold */
+  color: #0c4a6e;
+  /* Gold */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+.lenses-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+
+
+.lens-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lens-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lens-image {
+  border-radius: 0.375rem;
+  /* md */
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 12rem;
+  /* 48 */
+  object-fit: cover;
+}
+
+.lens-title {
+  font-size: 1.25rem;
+  /* xl */
+  font-weight: 600;
+  /* semibold */
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.lens-price {
+  font-size: 1.125rem;
+  /* lg */
+  font-weight: 700;
+  /* bold */
+  color: #0c4a6e;
+  /* Gold */
+  margin-bottom: 0.75rem;
+}
+
+.lens-button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #0c4a6e;
+  /* Gold */
+  color: black;
+  font-weight: 600;
+  /* semibold */
+  border-radius: 0.5rem;
+  border: 1px solid #0c4a6e;
+  /* Gold */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lens-button:hover {
+  background-color: white;
+  color: #0c4a6e;
+  /* Gold */
+}
+
+
+
+
+
+/* New tripods Section */
+.tripods-section {
+    margin: 0 auto;
+    margin-bottom: 0.75rem; /* mb-3 */
+    padding: 2.5rem 1.5rem;
+    background-color: #1F2937; /* gray-900 */
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.tripods-heading {
+    font-size: 1.875rem; /* 3xl */
+    font-family: serif;
+    font-weight: 700; /* bold */
+    color: #0c4a6e; /* gold-400 */
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 0.1em; /* tracking-wider */
+}
+
+.tripods-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* gap-6 */
+}
+
+
+.tripod-card {
+    background-color: #2D3748; /* gray-800 */
+    border-radius: 0.75rem; /* rounded-xl */
+    padding: 1rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tripod-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tripod-image {
+    border-radius: 0.5rem; /* rounded-lg */
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 16rem; /* h-64 */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tripod-image:hover {
+    transform: scale(1.05);
+}
+
+.tripod-text {
+    text-align: center;
+}
+
+.tripod-title {
+    font-size: 1.25rem; /* xl */
+    font-family: serif;
+    font-weight: 600; /* semibold */
+    color: #0c4a6e; /* gold-400 */
+}
+
+.tripod-price {
+    margin-top: 0.5rem;
+    font-size: 1.125rem; /* lg */
+    color: hsl(214, 20%, 69%); /* gray-400 */
+}
+
+.tripod-button {
+    margin-top: 1.5rem; /* mt-6 */
+    background-color: #0c4a6e; /* gold-400 */
+    color: #1F2937; /* gray-900 */
+    width: 100%;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 700; /* bold */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tripod-button:hover {
+    background-color: #1E293B; /* slate-900 */
+    color: #E2E8F0; /* slate-200 */
+}
+
+.hide-element{
+  display: none;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  /* bg-black */
+  color: #fff;
+  /* text-white */
+  padding: 2.5rem 2rem;
+  /* py-10 px-8 */
+  margin-top: 5rem;
+  /* mt-20 */
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  /* gap-8 */
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-logo {
+  font-size: 1.875rem;
+  /* text-3xl */
+  font-family: serif;
+  font-weight: bold;
+  color: #0c4a6e;
+  /* text-gold-400 */
+  margin-bottom: 1rem;
+  /* mb-3 */
+}
+
+.footer-description {
+  color: #A0AEC0;
+  /* text-gray-400 */
+  margin-bottom: 1rem;
+  /* mb-4 */
+}
+
+.footer-socials {
   display: flex;
   gap: 1rem;
+  /* space-x-4 */
+  margin-top: 1rem;
+  /* mt-4 */
 }
 
-/* Welcome Banner Styling */
-.welcome-banner {
-  background-image: url("images/came3.jpg");
-  margin-left: 5%;
-  margin-right: 5%;
-  background-position: center;
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 60px 20px;
+.social-icon {
+  font-size: 1.5rem;
+  /* text-2xl */
+  color: #0c4a6e;
+  /* text-gold-400 */
+  transition: color 0.2s ease-in-out;
 }
 
-.welcome-text h1 {
-  font-size: 2.5rem;
+.social-icon:hover {
+  color: #FFC107;
+  /* gold-500 */
+}
+
+.footer-heading {
+  font-size: 1.25rem;
+  /* text-xl */
+  font-weight: 600;
+  /* font-semibold */
+  color: #0c4a6e;
+  /* text-gold-400 */
+  margin-bottom: 1rem;
+  /* mb-4 */
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-.welcome-text p {
-  font-size: 1.2rem;
-  margin-top: 10px;
+.footer-link {
+  color: #A0AEC0;
+  /* text-gray-400 */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
-.logo {
-  font-size: 2rem;
-  color: var(--accent-color);
+.footer-link:hover {
+  color: #fff;
+  /* text-white */
 }
 
-nav ul {
+.footer-newsletter {
+  text-align: left;
+}
+
+.newsletter-form {
   display: flex;
-  gap: 1rem;
+  margin-top: 1rem;
 }
 
-.category {
-  padding: 20px;
-}
-
-.product-grid {
-  display: grid;
-  gap: 2.9rem;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1.2rem));
-}
-
-.product-item img {
-  max-width: 100%;
-  border-radius: 12px;
-}
-
-.product-item button {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  padding: 10px;
+.newsletter-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 9999px 0 0 9999px;
+  /* rounded-l-full */
   border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-top: 5px;
+  outline: none;
+  color: #000;
+  /* text-black */
 }
 
-footer {
-  background-color: #111;
-  color: var(--secondary-color);
-  padding: 20px;
+.newsletter-button {
+  background-color: #0c4a6e;
+  /* bg-gold-400 */
+  color: #000;
+  /* text-black */
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 0 9999px 9999px 0;
+  /* rounded-r-full */
+  transition: background-color 0.2s ease-in-out;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
+.newsletter-button:hover {
+  background-color: #FFC107;
+  /* hover:bg-gold-500 */
 }
 
 .footer-bottom {
+  margin-top: 2rem;
+  /* mt-8 */
   text-align: center;
-  font-size: 0.8rem;
-  color: #777;
+  color: #A0AEC0;
+  /* text-gray-400 */
+  font-size: 0.875rem;
+  /* text-sm */
+  padding-top: 1rem;
+  /* pt-4 */
+  border-top: 4px double rgba(75, 85, 99, 0.5);
+  /* border-double border-gray-600 */
+}
+
+.footer-highlight {
+  color: #0c4a6e;
+  /* text-gold-400 */
+  font-weight: 600;
+  /* font-semibold */
+  cursor: pointer;
+}
+
+.footer-info {
+  margin-top: 2rem;
+  /* mt-10 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links-inline {
+  display: flex;
+  gap: 1rem;
+  /* space-x-4 */
+}
+
+.footer-link-inline {
+  color: #A0AEC0;
+  /* text-gray-400 */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-link-inline:hover {
+  color: #fff;
+  /* text-white */
+
+
+/* Categories Section */
+.categories-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+}
+
+.categories-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #B97A57; /* Soft gold color, matching your palette */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Container for Category Cards */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Category Cards */
+.category-card {
+    background-color: #B97A57; /* Soft gold */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Category Specific Styles */
+.category-card.cameras {
+    background-color: #F3A847; /* Warm yellow-orange */
+}
+
+.category-card.lenses {
+    background-color: #FFD700; /* Classic gold */
+}
+
+.category-card.tripods {
+    background-color: #B95D34; /* Deep bronze */
+}
+
+.category-card.lighting {
+    background-color: #F4D35E; /* Light golden yellow */
+}
+
+/* Add subtle hover effect on links */
+.category-card:hover h3 {
+    color: #3e3e3e; /* Darker text on hover */
+}
+
+
+}
+@media (max-width: 640px) {
+  .hero-content h2 {
+    font-size: 3rem;
+  }
+  .nav{
+    display: none;
+  }
+  .hamb{
+    display: flex;
+  }
+  .logo h1{
+    font-size: 20px;
+  }
+  .cart{
+    margin: 0;
+  }
+  .hamb{
+    margin-right: 50px;
+  }
+  .hero-content{
+    color: black;
+  }
+  .hero-content .welcome-text h1,
+  .hero-content .welcome-text p{
+    text-align: center;
+    color: teal;
+    font-style: italic;
+    font-weight: 800;
+  
+  }
+  .camera-grid,
+  .lights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lenses-grid {
+    grid-template-columns: 1fr;
+  }
+  .mobile{
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav{
+    display: flex;
+  }
+  .camera-heading,
+  .lights-heading {
+    font-size: 2.25rem;
+    
+  }
+  .camera-grid,
+  .lights-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .camera-grid,
+  .lights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .lenses-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+.lenses-heading {
+  font-size: 2.25rem;
+  
+}
+.tripods-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tripods-heading {
+  font-size: 2.25rem;
+  /* 4xl */
+}
+  
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 20px 80px;
+  }
+ .camera-grid ,
+ .lights-grid{
+   grid-template-columns: repeat(4, 1fr);
+ }
+  .hero-content h2 {
+    font-size: 4rem;
+  }
+  .lenses-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+.tripods-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+}
+
+@media (min-width: 1280px) {
+  
 }
