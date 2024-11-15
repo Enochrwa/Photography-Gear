@@ -6,11 +6,20 @@ const cameraGrid = document.querySelectorAll('.camera-grid .camera-button');
 const lensGrid = document.querySelectorAll('.lenses-grid .lens-button');
 const tripodGrid = document.querySelectorAll('.tripods-grid .tripod-button');
 const lightsGrid = document.querySelectorAll('.lights-grid .lights-button');
-
+const hero = document.querySelector('.hero');
 const grids = [cameraGrid, lensGrid, tripodGrid, lightsGrid];
 
 let items = 0;
 itemsAdded.textContent = items;
+
+hero.style.backgroundImage = "url('/images/came3.jpg')";
+
+// Additional styles for better appearance
+hero.style.backgroundSize = "cover";
+hero.style.backgroundPosition = "center";
+hero.style.padding = "100px 20px";
+hero.style.color = "white";
+hero.style.textAlign = "center";
 
 grids.forEach((grid) => grid.forEach((btn) => {
     btn.addEventListener('click', () => {
