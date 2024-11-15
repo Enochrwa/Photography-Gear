@@ -1,5 +1,5 @@
 
-body {
+html,body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica', 'Roboto', sans-serif;
@@ -13,6 +13,7 @@ header {
   align-items: center;
   background-color: #111;
   padding: 0px 20px;
+  color: white;
   position: fixed;
   width: 100%;
   top: 0;
@@ -97,7 +98,7 @@ header {
 
 /* Hero Section */
 .hero {
-  background-image: url('assets/hero.jpg');
+  background-image: url('images/came2.jpg');
   background-size: cover;
   background-position: center;
   color: white;
