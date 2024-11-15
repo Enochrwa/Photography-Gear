@@ -12,7 +12,7 @@ const grids = [cameraGrid, lensGrid, tripodGrid, lightsGrid];
 let items = 0;
 itemsAdded.textContent = items;
 
-hero.style.backgroundImage = "url('/images/came3.jpg')";
+hero.style.backgroundImage = "url('https://images.pexels.com/photos/908430/pexels-photo-908430.jpeg?auto=compress&cs=tinysrgb&w=400')";
 
 // Additional styles for better appearance
 hero.style.backgroundSize = "cover";
