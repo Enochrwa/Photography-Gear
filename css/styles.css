@@ -98,7 +98,7 @@ header {
 
 /* Hero Section */
 .hero {
-  background-image: url('images/came2.jpg');
+  background-image: url('/images/came3.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -312,10 +312,11 @@ header {
   cursor: pointer;
   background-color: #0c4a6e;
   /* Gold */
-  color: black;
-  font-weight: 600;
+  color: white;
+  font-weight: 800;
   /* semibold */
   border-radius: 0.5rem;
+  border-style: none;
   border: 1px solid #0c4a6e;
   /* Gold */
   transition: background-color 0.3s, color 0.3s;
@@ -407,8 +408,8 @@ header {
   padding: 0.5rem;
   background-color: #0c4a6e;
   /* Gold */
-  color: black;
-  font-weight: 600;
+  color: white;
+  font-weight: 800;
   /* semibold */
   border-radius: 0.5rem;
   border: 1px solid #0c4a6e;
@@ -500,12 +501,13 @@ header {
 .tripod-button {
     margin-top: 1.5rem; /* mt-6 */
     background-color: #0c4a6e; /* gold-400 */
-    color: #1F2937; /* gray-900 */
+    color: white;
+    font-weight: 800; /* gray-900 */
     width: 100%;
     cursor: pointer;
     padding: 0.5rem 0;
     border-radius: 9999px; /* rounded-full */
-    font-weight: 700; /* bold */
+  
     transition: background-color 0.2s, color 0.2s;
 }
 
@@ -781,6 +783,7 @@ header {
   }
   .hamb{
     display: flex;
+    font-size: 1.3rem;
   }
   .logo h1{
     font-size: 20px;
