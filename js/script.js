@@ -18,7 +18,8 @@ hero.style.backgroundImage = "url('https://images.pexels.com/photos/908430/pexel
 hero.style.backgroundSize = "cover";
 hero.style.backgroundPosition = "center";
 hero.style.padding = "100px 20px";
-hero.style.color = "white";
+hero.style.color = "teal";
+hero.backgroundColor = "white";
 hero.style.textAlign = "center";
 
 grids.forEach((grid) => grid.forEach((btn) => {
